@@ -24,10 +24,10 @@ Shown in the About section. Portrait orientation, ~3:4.
 
 ## Education logos — `public/img/edu/`
 
-`buffalo.png`, `mdis.png`, `acs.png` are vendored (fetched as favicons, so a bit
-low-res). Replace with official crests (transparent PNG/SVG, square) for a
-sharper result. If a file is missing the row shows a clean text monogram
-(UB / MDIS / ACS) instead.
+`buffalo.svg` (official UB logo, vector), `mdis.png`, `acs.png` are the real
+institution logos. They sit on a light plate (`.edu-logo`) so the colored marks
+read against the dark page. If a file is ever missing the row falls back to a
+clean text monogram (UB / MDIS / ACS).
 
 ## Social preview (optional) — `public/og-image.png`
 

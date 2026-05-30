@@ -318,11 +318,12 @@ section{ position:relative; }
 .edu-row:last-of-type{ border-bottom:1px solid var(--line); }
 @media (max-width:600px){
   .edu-row{ grid-template-columns:auto 1fr; gap:20px; }
+  .edu-logo{ width:104px; height:54px; padding:9px 13px; }
   .edu-meta{ grid-column:2; text-align:left; }
 }
-.edu-logo{ width:66px; height:66px; background:var(--head); display:grid; place-items:center;
-  padding:12px; flex:none; overflow:hidden; }
-.edu-logo img{ width:100%; height:100%; object-fit:contain; display:block; }
+.edu-logo{ width:132px; height:64px; background:var(--head); display:grid; place-items:center;
+  padding:11px 16px; flex:none; overflow:hidden; }
+.edu-logo img{ max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; display:block; }
 .edu-mono{ font-family:'Jost', sans-serif; font-weight:600; font-size:21px; color:#0D0D0D;
   letter-spacing:-.02em; }
 .edu-name h3{ font-family:'Jost', sans-serif; font-size:clamp(21px,2.5vw,32px); font-weight:500;
