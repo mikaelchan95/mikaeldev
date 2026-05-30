@@ -213,27 +213,39 @@
     <!-- autoloRA -->
     <article class="case flip">
       <div class="case-media">
-        <div class="term term-case" data-typed>
-          <div class="tbar">
-            <span class="d" style="background:#e0867a"></span>
-            <span class="d" style="background:#e3c06a"></span>
-            <span class="d" style="background:#8fb87a"></span>
-            <span class="who">autolora — overnight run · open source</span>
+        <div class="rt r">
+          <div class="rt-head"><span class="rt-mark">◆</span> autolora · ratchet loop
+            <a class="rt-gh" href="https://github.com/mikaelchan95/autoloRA" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
-          <div class="body"></div>
-          <script type="application/json" class="seq">
-          [
-            {"cmd":"autolora run --base flux.1-dev --data ./subject --budget overnight","pause":460},
-            {"out":"<span class='ok'>●</span> agent online · git ratchet armed · baseline composite 0.781","pause":420},
-            {"out":"[exp 061] propose · lr 1.2e-4 → 1.6e-4 · dim 32 · alpha 16","pause":280},
-            {"out":"  train 1400 steps · CLIP 0.861 · ArcFace 0.923 · composite 0.874 <span class='ok'>↑ keep</span>","pause":360},
-            {"out":"[exp 062] propose · network_dim 32 → 48","pause":280},
-            {"out":"  composite 0.859 <span class='rv'>↓ revert</span>","pause":340},
-            {"out":"[exp 063] propose · alpha 16 → 24 · cosine restarts","pause":280},
-            {"out":"  composite 0.892 <span class='ok'>↑ keep · new best</span>","pause":360},
-            {"out":"<span class='ok'>✓</span> 100+ experiments overnight · best 0.892 · committed","pause":260}
-          ]
-          </script>
+          <div class="rt-scorerow">
+            <span class="rt-lbl">Composite · best so far</span>
+            <span class="rt-score">0.892<i>↑</i></span>
+          </div>
+          <div class="rt-chart">
+            <svg class="rt-svg" viewBox="0 0 480 176" aria-label="Best-so-far composite score climbing over experiments" role="img">
+              <defs><linearGradient id="rtfill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="var(--gold)" stop-opacity=".22"/>
+                <stop offset="1" stop-color="var(--gold)" stop-opacity="0"/>
+              </linearGradient></defs>
+              <line class="rt-grid" x1="12" y1="140.2" x2="468" y2="140.2"/>
+              <line class="rt-grid best" x1="12" y1="24.4" x2="468" y2="24.4"/>
+              <path class="rt-area" d="M12.0,140.2L38.8,140.2L38.8,127.7L65.6,127.7L65.6,127.7L92.5,127.7L92.5,114.1L119.3,114.1L119.3,114.1L146.1,114.1L146.1,105.8L172.9,105.8L172.9,99.5L199.8,99.5L199.8,99.5L226.6,99.5L226.6,86.0L253.4,86.0L253.4,86.0L280.2,86.0L280.2,69.3L307.1,69.3L307.1,69.3L333.9,69.3L333.9,57.8L360.7,57.8L360.7,57.8L387.5,57.8L387.5,45.3L414.4,45.3L414.4,45.3L441.2,45.3L441.2,31.7L468.0,31.7L468.0,24.4L468.0,160.0L12.0,160.0Z"/>
+              <path class="rt-best" pathLength="1" d="M12.0,140.2L38.8,140.2L38.8,127.7L65.6,127.7L65.6,127.7L92.5,127.7L92.5,114.1L119.3,114.1L119.3,114.1L146.1,114.1L146.1,105.8L172.9,105.8L172.9,99.5L199.8,99.5L199.8,99.5L226.6,99.5L226.6,86.0L253.4,86.0L253.4,86.0L280.2,86.0L280.2,69.3L307.1,69.3L307.1,69.3L333.9,69.3L333.9,57.8L360.7,57.8L360.7,57.8L387.5,57.8L387.5,45.3L414.4,45.3L414.4,45.3L441.2,45.3L441.2,31.7L468.0,31.7L468.0,24.4"/>
+              <circle class="rt-dot k" cx="12.0" cy="140.2" r="3" style="--d:0.90s"/><circle class="rt-dot k" cx="38.8" cy="127.7" r="3" style="--d:0.95s"/><circle class="rt-dot r" cx="65.6" cy="135.0" r="2.3" style="--d:1.00s"/><circle class="rt-dot k" cx="92.5" cy="114.1" r="3" style="--d:1.05s"/><circle class="rt-dot r" cx="119.3" cy="121.4" r="2.3" style="--d:1.10s"/><circle class="rt-dot k" cx="146.1" cy="105.8" r="3" style="--d:1.15s"/><circle class="rt-dot k" cx="172.9" cy="99.5" r="3" style="--d:1.20s"/><circle class="rt-dot r" cx="199.8" cy="108.9" r="2.3" style="--d:1.25s"/><circle class="rt-dot k" cx="226.6" cy="86.0" r="3" style="--d:1.30s"/><circle class="rt-dot r" cx="253.4" cy="94.3" r="2.3" style="--d:1.35s"/><circle class="rt-dot k" cx="280.2" cy="69.3" r="3" style="--d:1.40s"/><circle class="rt-dot r" cx="307.1" cy="77.6" r="2.3" style="--d:1.45s"/><circle class="rt-dot k" cx="333.9" cy="57.8" r="3" style="--d:1.50s"/><circle class="rt-dot r" cx="360.7" cy="65.1" r="2.3" style="--d:1.55s"/><circle class="rt-dot k" cx="387.5" cy="45.3" r="3" style="--d:1.60s"/><circle class="rt-dot r" cx="414.4" cy="51.5" r="2.3" style="--d:1.65s"/><circle class="rt-dot k" cx="441.2" cy="31.7" r="3" style="--d:1.70s"/><circle class="rt-dot k" cx="468.0" cy="24.4" r="3" style="--d:1.75s"/>
+            </svg>
+            <span class="rt-tag base">baseline 0.781</span>
+            <span class="rt-tag best">best 0.892</span>
+            <span class="rt-legend"><i class="k"></i>kept<i class="r"></i>reverted</span>
+          </div>
+          <div class="rt-metrics">
+            <div class="rt-mhdr">Weighted composite — scored vs reference</div>
+            <div class="rt-bar" style="--w:100%"><span class="rt-mn">CLIP-I</span><span class="rt-tk"><i></i></span><span class="rt-mw">.35</span></div>
+            <div class="rt-bar" style="--w:71.4%"><span class="rt-mn">CLIP-T</span><span class="rt-tk"><i></i></span><span class="rt-mw">.25</span></div>
+            <div class="rt-bar" style="--w:57.1%"><span class="rt-mn">Aesthetic</span><span class="rt-tk"><i></i></span><span class="rt-mw">.20</span></div>
+            <div class="rt-bar" style="--w:42.9%"><span class="rt-mn">ArcFace</span><span class="rt-tk"><i></i></span><span class="rt-mw">.15</span></div>
+            <div class="rt-bar" style="--w:14.3%"><span class="rt-mn">Diversity</span><span class="rt-tk"><i></i></span><span class="rt-mw">.05</span></div>
+          </div>
+          <div class="rt-foot">~25 min/exp · RTX 5090 · agent edits config.yaml only · git keep / revert</div>
         </div>
       </div>
       <div class="case-body">
@@ -242,11 +254,11 @@
         <p>An autonomous FLUX LoRA hyperparameter optimizer. An agent proposes a config change, trains, scores against a weighted composite, then keeps improvements and reverts regressions — unattended, overnight, 100+ experiments a weekend.</p>
         <div class="pbr">
           <div><div class="t">Problem</div><div class="v">Hand-tuning LoRA hyperparameters is slow and lossy</div></div>
-          <div><div class="t">Build</div><div class="v">Ratchet loop · multi-metric scoring · git keep/revert</div></div>
-          <div><div class="t">Result</div><div class="v">Public on GitHub · runs itself overnight</div></div>
+          <div><div class="t">Build</div><div class="v">autoresearch ratchet · 5-metric composite · git keep/revert</div></div>
+          <div><div class="t">Result</div><div class="v">Public on GitHub · ~100+ experiments a weekend</div></div>
         </div>
         <div class="chips">
-          <span class="chip">Python</span><span class="chip">FLUX / LoRA</span>
+          <span class="chip">Python</span><span class="chip">FLUX / LoRA</span><span class="chip">Ostris AI Toolkit</span>
           <span class="chip">CLIP · ArcFace</span><span class="chip">agent loop</span>
         </div>
       </div>
