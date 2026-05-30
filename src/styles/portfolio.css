@@ -203,6 +203,8 @@ section{ position:relative; }
 .term .out{ color:var(--text); }
 .term .ok{ color:var(--gold); }
 .term .key{ color:var(--gold); }
+.term .rv{ color:#e0867a; }
+.term-case .body{ min-height:300px; }
 .cursor-blink{ display:inline-block; width:8px; height:15px; background:var(--primary);
   vertical-align:-2px; margin-left:1px; animation:blink 1.05s steps(1) infinite; }
 @keyframes blink{ 50%{ opacity:0; } }

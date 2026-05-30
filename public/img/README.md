@@ -11,12 +11,14 @@ site never looks broken before you add them).
 | `easi.png`       | EASI case    | phone  |
 | `orb.png`        | ORB case     | web    |
 | `chefvault.png`  | ChefVault    | phone  |
-| `autolora.png`   | autoloRA     | web    |
 
-Phone frames crop to a tall portrait; web frames to a landscape card
-(`object-fit: cover`). Roughly: phone ≈ 9:16, web ≈ 3:2. Any size works —
-they're downscaled by the browser — but match the aspect ratio for the
-cleanest crop.
+(autoloRA is a CLI tool — its case renders a live-typed terminal in
+`index.html`, no image needed.)
+
+Phone screenshots are wrapped in a CSS iPhone device (`.frame.phone`), so
+drop in the **raw app screen** at phone aspect (≈9:19.5). Web frames crop to
+a landscape card (`object-fit: cover`, ≈3:2). Any size works — they're scaled
+by the browser — but match the aspect for the cleanest result.
 
 ## Portrait — `public/img/portrait.jpg`
 
