@@ -272,27 +272,61 @@ section{ position:relative; }
 .shot-ph .t{ font-family:'Jost', sans-serif; font-size:17px; color:var(--muted); letter-spacing:-.01em; }
 .shot-ph .s{ font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--faint); letter-spacing:.04em; }
 
-/* ChefVault "coming soon" teaser — replaces a screenshot for the unreleased app */
-.teaser{ position:relative; overflow:hidden; min-height:392px; display:flex; align-items:center; justify-content:center;
-  border:1px solid var(--line-2);
-  background:radial-gradient(120% 95% at 50% 12%, rgba(235,89,57,.20), transparent 58%),
-    radial-gradient(90% 80% at 82% 110%, rgba(197,155,100,.14), transparent 60%), var(--surface); }
-.teaser::after{ content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+/* ChefVault teaser — "paste a link → a clean, unit-converted recipe" (pre-launch) */
+.cv-teaser{ position:relative; overflow:hidden; min-height:444px; padding:24px;
+  display:flex; flex-direction:column; gap:15px; border:1px solid var(--line-2);
+  background:radial-gradient(135% 75% at 50% -12%, rgba(235,89,57,.16), transparent 56%), var(--surface); }
+.cv-teaser::before{ content:""; position:absolute; inset:0; pointer-events:none; opacity:.45;
   background-image:radial-gradient(circle at 1px 1px, rgba(236,228,214,.05) 1px, transparent 0); background-size:6px 6px; }
-.teaser-inner{ position:relative; z-index:2; text-align:center; padding:40px 30px; }
-.teaser-badge{ display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono', monospace;
-  font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--text);
-  border:1px solid var(--line-2); border-radius:var(--pill); padding:8px 15px; margin-bottom:26px; }
-.teaser-badge svg{ width:14px; height:14px; fill:var(--head); flex:none; }
-.teaser-big{ font-family:'Jost', sans-serif; font-weight:600; font-size:clamp(44px,6vw,66px);
-  line-height:.9; letter-spacing:-.035em; color:var(--head); }
-.teaser-sub{ color:var(--text); font-size:15px; max-width:30ch; margin:20px auto 0; line-height:1.55; }
-.teaser-status{ display:inline-flex; align-items:center; gap:9px; margin-top:26px;
-  font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.05em; color:var(--gold); }
-.teaser-status .dot{ width:7px; height:7px; border-radius:50%; background:var(--primary); flex:none;
-  animation:pulse 2s var(--ease) infinite; }
-@keyframes pulse{ 0%{ box-shadow:0 0 0 0 rgba(235,89,57,.5); } 70%{ box-shadow:0 0 0 11px rgba(235,89,57,0); }
-  100%{ box-shadow:0 0 0 0 rgba(235,89,57,0); } }
+.cv-teaser > *{ position:relative; z-index:2; }
+
+.cv-top{ display:flex; align-items:center; gap:9px; font-family:'JetBrains Mono', monospace;
+  font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--head); }
+.cv-top .cv-mark{ color:var(--primary); }
+.cv-top .cv-soon{ margin-left:auto; font-size:9.5px; letter-spacing:.2em; color:var(--gold);
+  border:1px solid var(--line-2); border-radius:var(--pill); padding:5px 11px; }
+
+.cv-paste{ position:relative; display:flex; align-items:center; gap:10px; overflow:hidden;
+  font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--text);
+  background:var(--bg); border:1px solid var(--line-2); padding:13px 14px; }
+.cv-paste .cv-play{ color:var(--primary); flex:none; }
+.cv-paste .cv-url{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cv-scan{ position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(100deg, transparent 32%, rgba(197,155,100,.28) 50%, transparent 68%);
+  transform:translateX(-110%); }
+.cv-teaser.in .cv-scan{ animation:cv-scan 2.2s var(--ease) .4s 2; }
+@keyframes cv-scan{ to{ transform:translateX(110%); } }
+
+.cv-arrow{ display:flex; align-items:center; justify-content:center; gap:9px;
+  font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted); }
+.cv-arrow .cv-spark{ color:var(--gold); }
+.cv-arrow .cv-down{ color:var(--primary); font-size:13px; }
+
+.cv-recipe{ flex:1; display:flex; flex-direction:column; padding:18px 18px 8px;
+  background:var(--bg-2); border:1px solid var(--line-2); }
+.cv-r-title{ font-family:'Jost', sans-serif; font-weight:600; font-size:clamp(20px,2.3vw,26px);
+  color:var(--head); letter-spacing:-.01em; line-height:1.06; }
+.cv-r-meta{ font-family:'Nunito Sans', sans-serif; font-size:12px; color:var(--muted); margin-top:6px; letter-spacing:.03em; }
+.cv-ing{ display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  border-top:1px solid var(--line); padding:11px 0; font-size:14px; color:var(--text); }
+.cv-ing:first-of-type{ margin-top:15px; }
+.cv-ing .cv-q{ font-family:'JetBrains Mono', monospace; font-size:12.5px; color:var(--head); white-space:nowrap; }
+.cv-ing .cv-q i{ color:var(--gold); font-style:normal; }
+
+.cv-foot{ display:flex; align-items:center; gap:8px; margin-top:auto;
+  font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.cv-foot svg{ width:13px; height:13px; fill:var(--head); flex:none; }
+
+/* assemble the recipe as the card scrolls in */
+.cv-teaser.in .cv-arrow{ animation:cv-rise .6s var(--ease) .5s both; }
+.cv-teaser.in .cv-recipe{ animation:cv-rise .7s var(--ease) .65s both; }
+.cv-teaser.in .cv-ing.d1{ animation:cv-rise .55s var(--ease) .95s both; }
+.cv-teaser.in .cv-ing.d2{ animation:cv-rise .55s var(--ease) 1.08s both; }
+.cv-teaser.in .cv-ing.d3{ animation:cv-rise .55s var(--ease) 1.21s both; }
+.cv-teaser.in .cv-ing i{ animation:cv-flash 1.3s var(--ease) 1.5s both; }
+@keyframes cv-rise{ from{ opacity:0; transform:translateY(12px); } to{ opacity:1; transform:none; } }
+@keyframes cv-flash{ 0%{ color:var(--muted); } 35%{ color:var(--primary); } 100%{ color:var(--gold); } }
 
 /* ---------------- remote ops ---------------- */
 .remote{ background:var(--bg-2); border-top:1px solid var(--line); }
@@ -395,7 +429,8 @@ section{ position:relative; }
 @media (prefers-reduced-motion:reduce){
   .r{ opacity:1; transform:none; transition:none; }
   .frame .inner{ clip-path:none; }
-  .cursor-blink,.tunnel,.scrollcue .bar,.marquee-track,.text-ring svg,.teaser-status .dot{ animation:none; }
+  .cursor-blink,.tunnel,.scrollcue .bar,.marquee-track,.text-ring svg,
+  .cv-scan,.cv-teaser.in .cv-arrow,.cv-teaser.in .cv-recipe,.cv-teaser.in .cv-ing,.cv-teaser.in .cv-ing i{ animation:none; }
 }
 
 /* ---------------- responsive ---------------- */
