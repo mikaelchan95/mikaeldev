@@ -247,8 +247,18 @@ section{ position:relative; }
 .frame .inner{ clip-path:inset(100% 0 0 0); position:relative; }   /* revealed by GSAP */
 .frame.shown .inner{ clip-path:inset(0 0 0 0); }
 .frame.web .inner{ height:360px; }
-.frame.phone{ max-width:330px; margin:0 auto; }
-.frame.phone .inner{ height:480px; }
+
+/* phone cases: a CSS iPhone device wrapping the raw app screenshot */
+.frame.phone{ width:268px; max-width:74%; margin:0 auto; aspect-ratio:1 / 2.03;
+  padding:11px; border:none; overflow:visible; border-radius:48px;
+  background:linear-gradient(150deg,#3b362f 0%,#1b1916 44%,#100f0d 100%);
+  box-shadow:0 40px 70px -24px rgba(0,0,0,.78), inset 0 0 0 1.5px rgba(236,228,214,.12),
+    inset 0 1.5px 1px rgba(236,228,214,.20); }
+.frame.phone .inner{ width:100%; height:100%; border-radius:37px; overflow:hidden; background:#000; }
+.frame.phone::after{ content:""; position:absolute; top:21px; left:50%; transform:translateX(-50%);
+  width:33%; height:23px; background:#000; border-radius:999px; z-index:4; }   /* dynamic island */
+.frame.phone .cap{ left:50%; right:auto; bottom:-32px; transform:translateX(-50%);
+  border:none; background:none; padding:0; white-space:nowrap; }
 
 /* real <img> fill + on-brand placeholder (replaces the prototype's drag-drop slot) */
 .shot{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:1; }
