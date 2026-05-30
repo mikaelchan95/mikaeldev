@@ -272,6 +272,28 @@ section{ position:relative; }
 .shot-ph .t{ font-family:'Jost', sans-serif; font-size:17px; color:var(--muted); letter-spacing:-.01em; }
 .shot-ph .s{ font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--faint); letter-spacing:.04em; }
 
+/* ChefVault "coming soon" teaser — replaces a screenshot for the unreleased app */
+.teaser{ position:relative; overflow:hidden; min-height:392px; display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--line-2);
+  background:radial-gradient(120% 95% at 50% 12%, rgba(235,89,57,.20), transparent 58%),
+    radial-gradient(90% 80% at 82% 110%, rgba(197,155,100,.14), transparent 60%), var(--surface); }
+.teaser::after{ content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background-image:radial-gradient(circle at 1px 1px, rgba(236,228,214,.05) 1px, transparent 0); background-size:6px 6px; }
+.teaser-inner{ position:relative; z-index:2; text-align:center; padding:40px 30px; }
+.teaser-badge{ display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono', monospace;
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--text);
+  border:1px solid var(--line-2); border-radius:var(--pill); padding:8px 15px; margin-bottom:26px; }
+.teaser-badge svg{ width:14px; height:14px; fill:var(--head); flex:none; }
+.teaser-big{ font-family:'Jost', sans-serif; font-weight:600; font-size:clamp(44px,6vw,66px);
+  line-height:.9; letter-spacing:-.035em; color:var(--head); }
+.teaser-sub{ color:var(--text); font-size:15px; max-width:30ch; margin:20px auto 0; line-height:1.55; }
+.teaser-status{ display:inline-flex; align-items:center; gap:9px; margin-top:26px;
+  font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.05em; color:var(--gold); }
+.teaser-status .dot{ width:7px; height:7px; border-radius:50%; background:var(--primary); flex:none;
+  animation:pulse 2s var(--ease) infinite; }
+@keyframes pulse{ 0%{ box-shadow:0 0 0 0 rgba(235,89,57,.5); } 70%{ box-shadow:0 0 0 11px rgba(235,89,57,0); }
+  100%{ box-shadow:0 0 0 0 rgba(235,89,57,0); } }
+
 /* ---------------- remote ops ---------------- */
 .remote{ background:var(--bg-2); border-top:1px solid var(--line); }
 .remote .big-line{ font-family:'Jost', sans-serif; font-size:clamp(40px,8vw,108px); font-weight:600;
@@ -373,7 +395,7 @@ section{ position:relative; }
 @media (prefers-reduced-motion:reduce){
   .r{ opacity:1; transform:none; transition:none; }
   .frame .inner{ clip-path:none; }
-  .cursor-blink,.tunnel,.scrollcue .bar,.marquee-track,.text-ring svg{ animation:none; }
+  .cursor-blink,.tunnel,.scrollcue .bar,.marquee-track,.text-ring svg,.teaser-status .dot{ animation:none; }
 }
 
 /* ---------------- responsive ---------------- */

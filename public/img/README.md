@@ -10,10 +10,9 @@ site never looks broken before you add them).
 | ---------------- | ------------ | ------ |
 | `easi.png`       | EASI case    | phone  |
 | `orb.png`        | ORB case     | web    |
-| `chefvault.png`  | ChefVault    | phone  |
 
-(autoloRA is a CLI tool — its case renders a live-typed terminal in
-`index.html`, no image needed.)
+(autoloRA renders a live-typed terminal, and ChefVault renders a "coming
+soon" teaser — both in `index.html`, no image needed.)
 
 Phone screenshots are wrapped in a CSS iPhone device (`.frame.phone`), so
 drop in the **raw app screen** at phone aspect (≈9:19.5). Web frames crop to
