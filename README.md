@@ -1,8 +1,8 @@
 # mikaeldev — Mikael Chan portfolio
 
 A one-page portfolio for a full-stack product engineer who also operates the
-business. Warm editorial "creative-developer" aesthetic: near-black + taupe +
-burnt-orange + gold, Jost / Nunito Sans / JetBrains Mono, a live WebGL aurora
+business. Lugia ocean-silver "creative-developer" aesthetic: deep navy + pearl +
+pale blue + indigo + crest red, Jost / Nunito Sans / JetBrains Mono, a live WebGL aurora
 hero, branded preloader, Lenis + GSAP scroll choreography, and an "honest mode"
 copy toggle.
 
@@ -28,7 +28,7 @@ mikaeldev/
 ├─ index.html               # markup + inlined brand/social SVGs
 ├─ src/
 │  ├─ portfolio.js          # entry: imports CSS + libs + aurora, runs motion
-│  ├─ aurora-warm.js        # WebGL hero shader (CSS fallback)
+│  ├─ aurora-lugia.js       # WebGL Lugia hero shader (CSS fallback)
 │  └─ styles/portfolio.css  # full design system
 ├─ public/                  # copied verbatim into the build root
 │  ├─ favicon.svg
@@ -53,7 +53,7 @@ mikaeldev/
    `index.html`. Brand logos come from the `simple-icons` package (inlined, no
    CDN); skills without a usable mark get the accent-diamond glyph.
 5. **Palette / type** — CSS custom properties at the top of
-   `src/styles/portfolio.css` (`--primary`, `--gold`, `--bg`, …).
+   `src/styles/portfolio.css` (`--primary`, `--secondary`, `--bg`, …).
 
 ## Deploy (Netlify)
 

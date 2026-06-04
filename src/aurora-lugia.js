@@ -1,6 +1,6 @@
 /* ============================================================
-   Aurora (warm) — WebGL hero.
-   Flowing burnt-orange / gold light over near-black.
+   Aurora (Lugia) — WebGL hero.
+   Flowing pale-blue / indigo light over deep ocean navy.
    CSS fallback if WebGL unavailable or reduced-motion.
    ============================================================ */
 (function () {
@@ -10,10 +10,10 @@
 
   function cssFallback() {
     canvas.style.background =
-      'radial-gradient(65% 90% at 22% 30%, rgba(235,89,57,.5), transparent 60%),' +
-      'radial-gradient(55% 80% at 82% 72%, rgba(197,155,100,.42), transparent 60%),' +
-      'radial-gradient(40% 60% at 55% 50%, rgba(235,89,57,.18), transparent 60%),' +
-      '#0D0D0D';
+      'radial-gradient(65% 90% at 22% 30%, rgba(91,119,251,.48), transparent 60%),' +
+      'radial-gradient(55% 80% at 82% 72%, rgba(156,172,230,.42), transparent 60%),' +
+      'radial-gradient(40% 60% at 55% 50%, rgba(214,230,245,.18), transparent 60%),' +
+      '#050716';
   }
 
   const gl = canvas.getContext('webgl', { antialias: true, alpha: false, powerPreference: 'high-performance' });
@@ -41,12 +41,12 @@
       float curtains = fbm(vec2(p.x*2.2+n*1.1+t*0.7, p.y*0.65));
       float band = smoothstep(0.18,0.95,curtains)*(1.0-uv.y*0.55);
       band *= 0.85+0.55*sin(p.x*2.6+t*3.4+n*5.0);
-      vec3 deep  = vec3(0.137,0.063,0.043);   // dark ember
-      vec3 acc   = vec3(0.922,0.349,0.224);   // burnt orange #EB5939
-      vec3 gold  = vec3(0.773,0.608,0.392);   // gold #C59B64
+      vec3 deep  = vec3(0.035,0.051,0.137);   // deep ocean navy #090D23
+      vec3 acc   = vec3(0.357,0.467,0.984);   // Lugia blue #5B77FB
+      vec3 pearl = vec3(0.839,0.902,0.961);   // pale blue #D6E6F5
       vec3 col = mix(deep, acc, clamp(band*1.2,0.0,1.0));
-      col = mix(col, gold, clamp(pow(band,2.4)*0.85,0.0,1.0));
-      vec3 bg = vec3(0.051,0.051,0.051);
+      col = mix(col, pearl, clamp(pow(band,2.4)*0.85,0.0,1.0));
+      vec3 bg = vec3(0.020,0.027,0.086);
       float v = smoothstep(1.3,0.2,length((uv-0.5)*vec2(asp,1.0)));
       col = mix(bg, col, clamp(band*1.4,0.0,1.0));
       col *= 0.55+0.45*v;
