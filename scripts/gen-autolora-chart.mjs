@@ -39,8 +39,8 @@ const yBase = Y(exp[0]).toFixed(1), yBest = Y(best).toFixed(1);
 const svg =
 `<svg class="rt-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
   <defs><linearGradient id="rtfill" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="var(--gold)" stop-opacity=".22"/>
-    <stop offset="1" stop-color="var(--gold)" stop-opacity="0"/>
+    <stop offset="0" stop-color="var(--secondary)" stop-opacity=".22"/>
+    <stop offset="1" stop-color="var(--secondary)" stop-opacity="0"/>
   </linearGradient></defs>
   <line class="rt-grid" x1="${padX}" y1="${yBase}" x2="${W - padX}" y2="${yBase}"/>
   <line class="rt-grid best" x1="${padX}" y1="${yBest}" x2="${W - padX}" y2="${yBest}"/>

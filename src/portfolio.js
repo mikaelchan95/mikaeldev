@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import SplitType from 'split-type';
-import './aurora-warm.js';
+import './aurora-lugia.js';
 
 gsap.registerPlugin(ScrollTrigger);
 

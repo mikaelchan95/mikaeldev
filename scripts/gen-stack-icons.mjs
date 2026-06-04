@@ -4,8 +4,8 @@
    as SVG (from the `simple-icons` package) instead of loading them
    from cdn.simpleicons.org. Run: `npm run gen:icons`.
 
-   Brand colours below are the *tinted* values the design used to
-   read well on the warm-dark theme — not always the brand's own hex.
+   Brand colours below are the *tinted* values the design uses to
+   read well on the Lugia ocean-dark theme — not always the brand's own hex.
    Skills with no (usable) brand mark fall back to the accent-diamond
    glyph, exactly as the design did for OpenAI et al.
    ============================================================ */
@@ -36,24 +36,24 @@ function badge(label, slug, tint) {
 const GROUPS = {
   'Frontend & Mobile': [
     ['React 19', 'react', '61DAFB'],
-    ['Next.js', 'nextdotjs', 'ECE4D6'],
-    ['React Native / Expo', 'expo', 'ECE4D6'],
-    ['Vite', 'vite', 'B98CFF'],
+    ['Next.js', 'nextdotjs', 'D6E6F5'],
+    ['React Native / Expo', 'expo', 'D6E6F5'],
+    ['Vite', 'vite', '9CACE6'],
     ['Tailwind', 'tailwindcss', '38BDF8'],
-    ['Three.js / R3F / WebGL', 'threedotjs', 'ECE4D6'],
+    ['Three.js / R3F / WebGL', 'threedotjs', 'D6E6F5'],
     ['Zustand', null],
   ],
   'Backend & Data': [
     ['Supabase', 'supabase', '3FCF8E'],
     ['PostgreSQL', 'postgresql', '7AA6E8'],
-    ['Deno edge functions', 'deno', 'ECE4D6'],
-    ['.NET 4.8', 'dotnet', 'C59B64'],
+    ['Deno edge functions', 'deno', 'D6E6F5'],
+    ['.NET 4.8', 'dotnet', '9CACE6'],
     ['REST · RLS', null],
-    ['Stripe', 'stripe', 'B98CFF'],
+    ['Stripe', 'stripe', '9CACE6'],
     ['Power Automate', null],
   ],
   'AI & Tooling': [
-    ['Claude Code · agents', 'anthropic', 'D97757'],
+    ['Claude Code · agents', 'anthropic', 'E74F41'],
     ['OpenAI · Anthropic APIs', null],
     ['Local LLMs (DeepSeek)', null],
     ['PaddleOCR / vision', null],
@@ -62,8 +62,8 @@ const GROUPS = {
   ],
   'Languages & Practice': [
     ['TypeScript · JavaScript', 'typescript', '3178C6'],
-    ['Python · C# · SQL', 'python', 'ECE4D6'],
-    ['SSH · Tailscale', 'tailscale', 'ECE4D6'],
+    ['Python · C# · SQL', 'python', 'D6E6F5'],
+    ['SSH · Tailscale', 'tailscale', 'D6E6F5'],
     ['CI/CD · migrations', null],
     ['i18n (EN/ZH)', null],
     ['cross-border remote ops', null],
